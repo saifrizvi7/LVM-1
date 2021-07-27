@@ -21,15 +21,15 @@ vgname = args.vgname
 
 
 if __name__ == '__main__':
-    import test_file
+    import test_saif
     suite = TestSuite()
     loader = unittest.TestLoader()
     if cmd == 'pvcreate':
-        suite.addTests(loader.loadTestsFromName("test_file.Task.test_pvcreate"))
+        suite.addTests(loader.loadTestsFromName("test_saif.Task.test_pvcreate"))
     if cmd == 'vgcreate':
-        suite.addTests(loader.loadTestsFromName("test_file.Task.test_vgcreate"))
+        suite.addTests(loader.loadTestsFromName("test_saif.Task.test_vgcreate"))
     if cmd == 'lvcreate':
-        suite.addTests(loader.loadTestsFromName("test_file.Task.test_xlvcreate"))
+        suite.addTests(loader.loadTestsFromName("test_saif.Task.test_xlvcreate"))
 
 
     runner = unittest.TextTestRunner()
